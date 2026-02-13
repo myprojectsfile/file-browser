@@ -1,0 +1,16 @@
+{
+  "name": "file-browser",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"pnpm run server\" \"pnpm run client\"",
+    "server": "pnpm --dir backend start",
+    "client": "pnpm --dir frontend start",
+    "install-all": "pnpm install && pnpm --dir backend install && pnpm --dir frontend install",
+    "build": "pnpm --dir frontend build",
+    "prod": "pnpm --dir backend prod:start"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
